@@ -1,0 +1,37 @@
+<!--<?php/*
+			if (!empty($_POST['submit'])) {
+            $acc_rej = in_array($_POST['acc_rej'], ['0', '1']) ? $_POST['acc_rej'] : false;
+
+	switch ($acc_rej) {
+        case '0':
+			echo "Product rejected!";
+			?>
+								<script>
+									alert( "Product rejected! ");
+									</script>
+								<?php
+            #$query = "INSERT INTO exporter (reg_as) VALUES (:reg_as)";
+            break;
+			case '1':
+            $query = "INSERT INTO `tbl_product`(`p_name`, `p_old_price`, `p_current_price`, `p_qty`, `p_featured_photo`, `p_description`, `p_short_description`, `p_feature`, `p_condition`, `p_return_policy`, `p_total_view`, `p_is_featured`, `p_is_active`, `ecat_id`) 
+			SELECT `p_name`, `p_old_price`, `p_current_price`, `p_qty`, `p_featured_photo`, `p_description`, `p_short_description`, `p_feature`, `p_condition`, `p_return_policy`, `p_total_view`, `p_is_featured`, `p_is_active`, `ecat_id` FROM `tbl_seller_product` WHERE acc_rej=1";
+            break;
+        default:
+            throw new Exception('Handle your error here!');
+            break;
+    }
+	$statement = $pdo->prepare($query);
+    $insert = $statement->execute();
+	/*[':reg_as' => $value]
+
+    if ($insert) {*/
+       ?>
+								<script>
+									alert( "Product accepted! ");
+									</script>
+								<?php/*
+    } else {
+        echo "<script>alert('There was an error some where!.. Please try again')</script>";
+    }
+} */
+?>-->
